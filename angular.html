@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example - example-ngModel-getter-setter-production</title>
+  
+  <script src="//code.angularjs.org/snapshot/angular.min.js"></script>
+  <script src="app.js"></script>
+  
+
+  
+</head>
+<body >
+  <div ng-app ng-init="firstName, lastName, dob, gender, person = []">
+  <form name="userForm">
+    
+    <label>First Name:
+      <input type="text" name="firstName" ng-model="firstName"/>
+    </label>
+    
+    <label>Last Name:
+      <input type="text" name="lastName" ng-model="lastName"/>
+    </label><br>
+    
+    <label>Dob
+      <input type="date" name="dob" ng-model="dob"/>
+    </label><br>
+    
+    <label>Gender
+      <input type="text" name="gender" ng-model="gender"/>
+    </label>
+    
+    <!--<div class="checkbox">
+      <label><input  name="gender" type="radio" value="">Male</label>
+    </div>
+    <div class="checkbox">
+      <label><input name="gender" type="radio" value="">Female</label>
+    </div>-->
+  </form>
+  
+  <div>
+      <p>First Name:<b>{{firstName}}</b></p>
+      <p>Last Name:<b>{{lastName}}</b></p>
+      </b><p>Date of Birth: <b>{{dob | date}}</b></p>
+      <p>Gender: <b>{{gender}}</b></p>
+      
+      <p>Full Name:<b>{{firstName + " " + lastName}}</b></p>
+      <p>Age: <b>{{dob |date}}</b></p>
+    </div>
+  </div>
+  
+</div>
+</body>
+</html>
+
+<!-- 
+Copyright 2018 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->
