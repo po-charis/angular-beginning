@@ -16,27 +16,26 @@
     
     <label>First Name:
       <input type="text" name="firstName" ng-model="firstName"/>
-    </label>
+    </label><br><br>
     
     <label>Last Name:
       <input type="text" name="lastName" ng-model="lastName"/>
-    </label><br>
+    </label><br><br>
     
-    <label>Dob
+    <label>Dob:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <input type="date" name="dob" ng-model="dob"/>
-    </label><br>
+    </label><br><br>
     
-    <label>Gender
-      <input type="text" name="gender" ng-model="gender"/>
+    <label>Gender: &nbsp;&nbsp;&nbsp;
+      
+      <label><input  name="gender" type="radio" value="Male" ng-model="gender">Male</label>
+   
+    
+      <label><input name="gender" type="radio" value="Female" ng-model="gender">Female</label>
+    
     </label>
     
-    <!--<div class="checkbox">
-      <label><input  name="gender" type="radio" value="">Male</label>
-    </div>
-    <div class="checkbox">
-      <label><input name="gender" type="radio" value="">Female</label>
-    </div>-->
-  </form>
+  </form><br><hr>
   
   <div>
       <p>First Name:<b>{{firstName}}</b></p>
@@ -45,7 +44,7 @@
       <p>Gender: <b>{{gender}}</b></p>
       
       <p>Full Name:<b>{{firstName + " " + lastName}}</b></p>
-      <p>Age: <b>{{dob |date}}</b></p>
+      <p>Age: <b>{{dob ? 2018 - (dob |date : 'y') : ''}} </b></p>
     </div>
   </div>
   
