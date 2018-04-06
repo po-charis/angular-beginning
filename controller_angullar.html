@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example - example-ngModel-getter-setter-production</title>
+  
+  <script src="//code.angularjs.org/snapshot/angular.min.js"></script>
+  <script src="app.js"></script>
+    <script src="Person.js"></script>
+  
+
+  
+</head>
+<body >
+  <div ng-app="Person" ng-controller="personController as person">
+  <form name="userForm">
+    
+    <label>First Name:
+      <input type="text" name="firstName" ng-model="person.firstName"/>
+    </label><br><br>
+    
+    <label>Last Name:
+      <input type="text" name="lastName" ng-model="person.lastName"/>
+    </label><br><br>
+    
+    <label>Dob:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="date" name="dob" ng-model="person.dob"/>
+    </label><br><br>
+    
+    <label>Gender: &nbsp;&nbsp;&nbsp;
+      
+      <label><input  name="gender" type="radio" value="Male" ng-model="person.gender">Male</label>
+   
+    
+      <label><input name="gender" type="radio" value="Female" ng-model="person.gender">Female</label>
+    
+    </label>
+    
+  </form><br><hr>
+  
+  <div>
+      <p>First Name:<b>{{person.firstName}}</b></p>
+      <p>Last Name:<b>{{person.lastName}}</b></p>
+      <!--</b><p>Date of Birth: <b>{{person.dob | date}}</b></p>-->
+      <p>Gender: <b>{{person.gender}}</b></p>
+      
+      <p>Full Name:<b>{{person.getFullName()}}</b></p>
+      <p>Age: <b>{{person.getYear()}} </b></p>
+      <p>Month: <b>{{person.getMonth()}} </b></p>
+      <p>Days: <b>{{person.getDay()}} </b></p>
+      
+    </div>
+  </div>
+  
+</div>
+</body>
+</html>
+
+<!-- 
+Copyright 2018 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->
